@@ -1,0 +1,717 @@
+/* ===== रंग (थीम) ===== */
+:root {
+  --bg-main: #000000;      /* मुख्य बैकग्राउंड: काला */
+  --bg-card: #111111;      /* कार्ड का बैकग्राउंड: हल्का काला */
+  --text-yellow: #FFD60A;  /* पीला: हेडिंग और हाइलाइट के लिए */
+  --text-white: #FFFFFF;   /* सफ़ेद: सामान्य टेक्स्ट के लिए */
+  --text-muted: #BBBBBB;   /* हल्का सफ़ेद: छोटे विवरण के लिए */
+}
+
+/* ===== रीसेट ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== बेस स्टाइल ===== */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-white);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: var(--text-yellow);
+}
+
+a {
+  color: var(--text-yellow);
+  text-decoration: none;
+}
+
+section {
+  padding: 80px 8%;
+}
+
+/* ===== Navbar ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid #222;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-white);
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--text-yellow);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-white);
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--text-yellow);
+}
+
+.nav-btn {
+  background-color: var(--text-yellow);
+  color: #000 !important;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* ===== Hero ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 120px;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero-tag {
+  color: var(--text-yellow);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  line-height: 1.2;
+  color: var(--text-white);
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: var(--text-yellow);
+}
+
+.hero-text {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background-color: var(--text-yellow);
+  color: #000;
+}
+
+.btn-primary:hover {
+  background-color: var(--text-white);
+}
+
+.btn-outline {
+  border: 2px solid var(--text-yellow);
+  color: var(--text-yellow);
+}
+
+.btn-outline:hover {
+  background-color: var(--text-yellow);
+  color: #000;
+}
+
+/* ===== सेक्शन हेडर (हर सेक्शन में दोबारा काम आएगा) ===== */
+.section-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 50px;
+}
+
+.section-tag {
+  color: var(--text-yellow);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.section-header h2 {
+  font-size: 2.4rem;
+  color: var(--text-white);
+  margin-bottom: 15px;
+}
+
+.section-header h2 span {
+  color: var(--text-yellow);
+}
+
+.section-text {
+  color: var(--text-muted);
+}
+
+/* ===== Services ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background-color: var(--bg-card);
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 30px 25px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--text-yellow);
+}
+
+.service-icon {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.card-btn {
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 10px 20px;
+  border: 2px solid var(--text-yellow);
+  border-radius: 6px;
+  color: var(--text-yellow);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.card-btn:hover {
+  background-color: var(--text-yellow);
+  color: #000;
+}
+
+.coming-soon {
+  margin-top: auto;
+  align-self: flex-start;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+}
+
+.service-card:hover .coming-soon {
+  color: var(--text-yellow);
+}
+
+/* ===== What We Do ===== */
+.scope-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.scope-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 22px;
+  border-left: 3px solid var(--text-yellow);
+  background-color: var(--bg-card);
+  border-radius: 0 10px 10px 0;
+  transition: background-color 0.3s;
+}
+
+.scope-item:hover {
+  background-color: #1a1a1a;
+}
+
+.scope-check {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--text-yellow);
+  color: #000;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+.scope-item h3 {
+  margin-bottom: 6px;
+  color: var(--text-white);
+  font-size: 1.1rem;
+}
+
+.scope-item p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ===== Process ===== */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 25px;
+  counter-reset: none;
+}
+
+.process-step {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: var(--bg-card);
+  border: 1px solid #222;
+  border-radius: 12px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.process-step:hover {
+  transform: translateY(-8px);
+  border-color: var(--text-yellow);
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--text-yellow);
+  border-radius: 50%;
+  color: var(--text-yellow);
+  font-size: 1.3rem;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.process-step:hover .step-number {
+  background-color: var(--text-yellow);
+  color: #000;
+}
+
+.process-step h3 {
+  margin-bottom: 10px;
+  color: var(--text-white);
+}
+
+.process-step p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ===== Hamburger Menu ===== */
+.menu-toggle {
+  display: none;              /* बड़ी स्क्रीन पर बटन छिपा रहेगा */
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 28px;
+  height: 3px;
+  background-color: var(--text-yellow);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* खुलने पर तीन लाइनें "X" बन जाएँगी */
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ===== मोबाइल और टैबलेट ===== */
+@media (max-width: 850px) {
+
+  .menu-toggle {
+    display: flex;            /* छोटी स्क्रीन पर बटन दिखेगा */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    background-color: #000;
+    border-bottom: 1px solid #222;
+    display: none;            /* शुरू में मेन्यू बंद */
+  }
+
+  .nav-links.active {
+    display: flex;            /* क्लिक पर मेन्यू खुलेगा */
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 16px 0;
+    border-top: 1px solid #1a1a1a;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
+
+
+/* ===== Projects ===== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background-color: var(--bg-card);
+  border: 1px solid #222;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--text-yellow);
+}
+
+.project-thumb {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  background: linear-gradient(135deg, #1a1a1a, #2b2400);
+  border-bottom: 1px solid #222;
+}
+
+.project-info {
+  padding: 22px;
+}
+
+.project-category {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--text-yellow);
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.project-info h3 {
+  margin-bottom: 8px;
+  color: var(--text-white);
+}
+
+.project-info p {
+  margin-bottom: 15px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tags span {
+  padding: 4px 12px;
+  border: 1px solid var(--text-yellow);
+  border-radius: 20px;
+  color: var(--text-yellow);
+  font-size: 0.8rem;
+}
+
+/* ===== About ===== */
+.about-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-text .section-tag {
+  color: var(--text-yellow);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.about-text h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: var(--text-white);
+}
+
+.about-text h2 span {
+  color: var(--text-yellow);
+}
+
+.about-text > p {
+  color: var(--text-muted);
+  margin-bottom: 15px;
+}
+
+.about-points {
+  margin-top: 25px;
+  display: grid;
+  gap: 18px;
+}
+
+.about-point {
+  padding: 16px 20px;
+  border-left: 3px solid var(--text-yellow);
+  background-color: var(--bg-card);
+  border-radius: 0 10px 10px 0;
+}
+
+.about-point h3 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.about-point p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 30px 15px;
+  background-color: var(--bg-card);
+  border: 1px solid #222;
+  border-radius: 12px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.stat-box:hover {
+  border-color: var(--text-yellow);
+  transform: translateY(-6px);
+}
+
+.stat-box h3 {
+  font-size: 2.4rem;
+  color: var(--text-yellow);
+}
+
+.stat-box p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Contact */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.contact-info p {
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.contact-details p {
+  color: var(--text-white);
+  margin-bottom: 10px;
+}
+
+.contact-form {
+  background-color: var(--bg-card);
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-yellow);
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background-color: var(--bg-main);
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: var(--text-white);
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--text-yellow);
+}
+
+/* Footer */
+footer {
+  background-color: var(--bg-card);
+  border-top: 1px solid #222;
+  padding: 40px 8%;
+  text-align: center;
+}
+
+.footer-content p {
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 800px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Responsive Navbar */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--text-yellow);
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+@media (max-width: 800px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--bg-main);
+    border-bottom: 1px solid #222;
+    padding: 20px 8%;
+    gap: 18px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
